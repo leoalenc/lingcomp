@@ -1,0 +1,11 @@
+kwá ; kua ; u-> w || k _ a|e
+kwayé ; kuaye ; u-> w || k _ a|e
+kwera ; kuera ; u-> w || k _ a|e
+kunyã  ; kunya  ; a -> ã || ny _
+penyẽ ; penye ; e -> ẽ || ny _
+kunhã  ; kunyã  ; y -> h || n _
+penhẽ ; penye ; y-> h || n _
+ambeú  ; hambeu ; h -> 0 || # _
+ambeú  ; hambeu ; u -> ú || e _ #
+repuãmu  ; repuamu ; a -> ã || u _ m
+upukasawa ; upukásawa ; á -> a || _ sa
