@@ -1,4 +1,4 @@
-Python 3.8.10 (default, Mar 13 2023, 10:26:41) 
+Python 3.8.10 (default, Mar 13 2023, 10:26:41)
 [GCC 9.4.0] on linux
 Type "help", "copyright", "credits" or "license()" for more information.
 >>> import AnnotateConllu
@@ -56,13 +56,13 @@ False
 
 >>> s='''Marupí/advrc@ se rapé, se ramunha? (Rodrigues, 77, adap.) -  Por onde é o meu caminho, meu avô?'''
 >>> parse(s):
-	
+
 SyntaxError: invalid syntax
 >>> def parse(s,pref,textid,index,sentid):
 	if not AnnotateConllu.checkSentence(s):
 		AnnotateConllu.parseExample(s,pref,textid,index,sentid)
 
-		
+
 >>> parse(s)
 Traceback (most recent call last):
   File "/usr/lib/python3.8/idlelib/run.py", line 559, in runcode
@@ -148,7 +148,7 @@ Marupí/advrc@ se rapé, se ramunha?'''
 	tk=AnnotateConllu.parseSentence(f)
 	print(tk.serialize())
 
-	
+
 1	Maria	maria	PROPN	PROPN	_	3	nsubj	_	SpaceAfter=No|TokenRange=0:5
 2	,	,	PUNCT	PUNCT	_	3	punct	_	TokenRange=5:6
 3	marupí	marupí	ADV	ADVRC	AdvType=Loc|PronType=Int	0	root	_	TokenRange=7:13
@@ -188,7 +188,7 @@ Marupí/advrc@ se rapé, se ramunha?'''
 	AnnotateConllu.handleVocative(tk)
 	print(tk.serialize())
 
-	
+
 1	Maria	maria	PROPN	PROPN	_	3	vocative	_	SpaceAfter=No|TokenRange=0:5
 2	,	,	PUNCT	PUNCT	_	3	punct	_	TokenRange=5:6
 3	marupí	marupí	ADV	ADVRC	AdvType=Loc|PronType=Int	0	root	_	TokenRange=7:13
@@ -230,7 +230,7 @@ Marupí/advrc@ se rapé, se ramunha?'''
 	AnnotateConllu.handleVocative(tk)
 	print(tk.serialize())
 
-	
+
 1	Maria	maria	PROPN	PROPN	_	3	vocative	_	SpaceAfter=No|TokenRange=0:5
 2	,	,	PUNCT	PUNCT	_	3	punct	_	TokenRange=5:6
 3	marupí	marupí	ADV	ADVRC	AdvType=Loc|PronType=Int	0	root	_	TokenRange=7:13
@@ -262,7 +262,7 @@ UnboundLocalError: local variable 'beforeprevious' referenced before assignment
 	AnnotateConllu.handleVocative(tk)
 	print(tk.serialize())
 
-	
+
 1	Maria	maria	PROPN	PROPN	_	3	vocative	_	SpaceAfter=No|TokenRange=0:5
 2	,	,	PUNCT	PUNCT	_	3	punct	_	TokenRange=5:6
 3	marupí	marupí	ADV	ADVRC	AdvType=Loc|PronType=Int	0	root	_	TokenRange=7:13
@@ -296,7 +296,7 @@ NameError: name 'punct' is not defined
 	AnnotateConllu.handleVocative(tk)
 	print(tk.serialize())
 
-	
+
 1	Maria	maria	PROPN	PROPN	_	3	vocative	_	SpaceAfter=No|TokenRange=0:5
 2	,	,	PUNCT	PUNCT	_	3	punct	_	TokenRange=5:6
 3	marupí	marupí	ADV	ADVRC	AdvType=Loc|PronType=Int	0	root	_	TokenRange=7:13
@@ -338,7 +338,7 @@ NameError: name 'punct' is not defined
 	AnnotateConllu.handleVocative(tk)
 	print(tk.serialize())
 
-	
+
 Traceback (most recent call last):
   File "/usr/lib/python3.8/idlelib/run.py", line 559, in runcode
     exec(code, self.locals)
@@ -353,7 +353,7 @@ UnboundLocalError: local variable 'beforeprevious' referenced before assignment
 	AnnotateConllu.handleVocative(tk)
 	print(tk.serialize())
 
-	
+
 1	Maria	maria	PROPN	PROPN	_	3	vocative	_	SpaceAfter=No|TokenRange=0:5
 2	,	,	PUNCT	PUNCT	_	1	punct	_	TokenRange=5:6
 3	marupí	marupí	ADV	ADVRC	AdvType=Loc|PronType=Int	0	root	_	TokenRange=7:13
@@ -395,7 +395,7 @@ UnboundLocalError: local variable 'beforeprevious' referenced before assignment
 	AnnotateConllu.handleVocative(tk)
 	print(tk.serialize())
 
-	
+
 1	Maria	maria	PROPN	PROPN	_	3	vocative	_	SpaceAfter=No|TokenRange=0:5
 2	,	,	PUNCT	PUNCT	_	1	punct	_	TokenRange=5:6
 3	marupí	marupí	ADV	ADVRC	AdvType=Loc|PronType=Int	0	root	_	TokenRange=7:13
@@ -619,7 +619,7 @@ IndexError: list index out of range
 >>> for sent in sents:
 	for token in sent:
 		if token['deprel']=='cop' and token['xpos'] =! 'COP':
-			
+
 SyntaxError: invalid syntax
 >>> sents=AnnotateConllu.extractConlluSents('corpus/universal-dependencies/yrl_complin-ud-test.conllu')
 >>> for sent in sents:
@@ -628,7 +628,7 @@ SyntaxError: invalid syntax
 			print(sent.metadata['sent_id'], token['xpos'])
 			token['xpos'] = 'COP'
 
-			
+
 Alencar2021:0:0:3 V
 Alencar2021:0:0:7 V
 Navarro2016:4:3:170 AUXFS
@@ -695,7 +695,7 @@ IndexError: list index out of range
 	for token in sent:
 		if token['upos'] == 'ADV':
 			feats=token.get('feats')if feats and feats.get('PronType') == 'Int'
-			
+
 SyntaxError: invalid syntax
 >>> sents=AnnotateConllu.extractConlluSents('corpus/universal-dependencies/yrl_complin-ud-test.conllu')
 >>> for sent in sents:
@@ -706,7 +706,7 @@ SyntaxError: invalid syntax
 				if not sent[-1]['lemma'] == '?':
 					print(sent.metadata['sent_id'], token['lemma'], token['xpos'])
 
-					
+
 MooreFP1994:0:0:26 mamé ADVRC
 MooreFP1994:1:6:33 mairamé ADVRT
 Navarro2016:0:0:61 masuí ADVRC
@@ -759,7 +759,7 @@ Casasnovas2006:1:15:15 mayé ADVRA
 					if len(xpos)< 5:
 						print(sent.metadata['sent_id'], token['lemma'], xpos)
 
-						
+
 Avila2021:13:2:131 mamé ADVR
 Avila2021:0:0:269 mamé ADVR
 Avila2021:0:0:373 mamé ADVR
@@ -773,7 +773,7 @@ Avila2021:0:0:409 mamé ADVR
 				if len(xpos)< 5:
 					print(sent.metadata['sent_id'], token['lemma'], xpos)
 
-					
+
 Avila2021:13:2:131 mamé ADVR
 Avila2021:15:1:163 makití ADVC
 Avila2021:0:0:269 mamé ADVR
@@ -790,7 +790,7 @@ Avila2021:0:0:415 mamé ADVR
 				if len(xpos)< 5:
 					print(sent.metadata['sent_id'], token['lemma'], xpos)
 
-					
+
 Avila2021:15:1:163 makití ADVC
 Avila2021:0:0:415 mamé ADVR
 >>> sents=AnnotateConllu.extractConlluSents('corpus/universal-dependencies/yrl_complin-ud-test.conllu')
@@ -802,7 +802,7 @@ Avila2021:0:0:415 mamé ADVR
 				if not sent[-1]['lemma'] == '?':
 					print(sent.metadata['sent_id'], token['lemma'], token['xpos'])
 
-					
+
 MooreFP1994:0:0:23 maã INT
 Navarro2016:0:0:84 maã INT
 Navarro2016:0:0:147 maã INT
@@ -836,7 +836,7 @@ TerraPreta2013:1:7:7 awá INT
 
 # sent_id = Avila2021:43:2:576
 # text = Apekatu ã paá usaã usú, mairamé paá uyuíri-putari ã.
-# text_eng =  He felt that he had already gone far, when, they say, he wanted to return. 
+# text_eng =  He felt that he had already gone far, when, they say, he wanted to return.
 # text_por = Sentiu que já fora longe, quando, dizem, quis retornar.
 # text_source = Comunidade Indígena Anamuim, 9, adap.
 # text_annotator = LFdeA
@@ -873,7 +873,7 @@ TerraPreta2013:1:7:7 awá INT
 
 # sent_id = Avila2021:43:2:576
 # text = Apekatú ã paá usaã usú, mairamé paá uyuíri-putari ã.
-# text_eng =  He felt that he had already gone far, when, they say, he wanted to return. 
+# text_eng =  He felt that he had already gone far, when, they say, he wanted to return.
 # text_por = Sentiu que já fora longe, quando, dizem, quis retornar.
 # text_source = Comunidade Indígena Anamuim, 9, adap.
 # text_annotator = LFdeA
@@ -911,7 +911,7 @@ TerraPreta2013:1:7:7 awá INT
 
 # sent_id = Avila2021:43:2:576
 # text = Apekatú ã paá usaã usú, mairamé paá uyuíri-putari ã.
-# text_eng =  He felt that he had already gone far, when, they say, he wanted to return. 
+# text_eng =  He felt that he had already gone far, when, they say, he wanted to return.
 # text_por = Sentiu que já fora longe, quando, dizem, quis retornar.
 # text_source = Comunidade Indígena Anamuim, 9, adap.
 # text_annotator = LFdeA
@@ -1087,7 +1087,7 @@ TerraPreta2013:1:7:7 awá INT
 
 
 >>> s='''― Makití/advrc@ se igara? | ― Aikwé. (Stradelli, 317, adap.) -  ― Onde está a minha canoa? | ― Aqui está. - “Where is my canoe?” | "Here it is."'''
->>> 
+>>>
 >>> AnnotateConllu.TreebankSentences(s,'Avila2021',44,1,578)
 # sent_id = Avila2021:44:1:578
 # text = ― Makití se igara?
@@ -1269,7 +1269,7 @@ TerraPreta2013:1:7:7 awá INT
 	print(f"{nheenga[i]}\t{port[i]}")
 	i+=1
 
-	
+
 Pitúna	A noite
 okệri	adormecida
 oikộ	está
@@ -1293,7 +1293,7 @@ Da Cobra-Grande	a filha,	contam,	casara-se	um	jovem	com.'''
 			i+=1
 		print('\n')
 
-		
+
 >>> texto='''Boia-Uaçú	menbɨra,	ipahá,	oiumendári	iepé	kurumĩ-uaçú	irúmo.
 Da Cobra-Grande	a filha,	contam,	casara-se	um	jovem	com.
 
@@ -1325,4 +1325,109 @@ Da Cobra-Grande	a filha,	contam,	casara-se	um	jovem	com.
 
 Quahá	kurumi-uaçú	orekộ	muçapíra	miaçúa	catú rẹtệ.
 Este	jovem	tinha	três	vassalos	fiéis.
+>>>
+>>> s={1,2,1,3,7,4,2,3}
+>>> type(s)
+<class 'set'>
+>>> t={1,2,3,4,7}
+>>> s==t
+True
+>>> t
+{1, 2, 3, 4, 7}
+>>> s
+{1, 2, 3, 4, 7}
+>>> s[0]
+Traceback (most recent call last):
+  File "/usr/lib/python3.8/idlelib/run.py", line 559, in runcode
+    exec(code, self.locals)
+  File "<pyshell#203>", line 1, in <module>
+TypeError: 'set' object is not subscriptable
+>>> lista1=list(s)
+>>> lista1[0]
+1
+>>> lista1[2]
+3
+>>> dic={}
+>>> type(dic)
+<class 'dict'>
+>>> dic['ö']='ọ'
+>>> dic['ô']='ộ'
+>>> dic
+{'ö': 'ọ', 'ô': 'ộ'}
+>>> dic['y']='ɨ'
+>>> dic['ö']
+'ọ'
+>>> dic['ë']
+Traceback (most recent call last):
+  File "/usr/lib/python3.8/idlelib/run.py", line 559, in runcode
+    exec(code, self.locals)
+  File "<pyshell#214>", line 1, in <module>
+KeyError: 'ë'
+>>> dic.get('ë')
+>>> r=dic.get('ë')
+>>> type(r)
+<class 'NoneType'>
+>>> def pprint(c):
+	v=dic.get(c)
+	if v:
+		print(f"Digita{c} para depois converter para{v}")
+	else:
+		print(f"{c} não foi definido.")
+
+
+>>> pprint('ö')
+Digitaö para depois converter paraọ
+>>> def pprint(c):
+	v=dic.get(c)
+	if v:
+		print(f"Digita {c} para depois converter para {v}.")
+	else:
+		print(f"{c} não foi definido.")
+
+
+>>> pprint('ö')
+Digita ö para depois converter para ọ.
+>>> pprint('ä')
+ä não foi definido.
+>>> def o_family(c):
+	v=dic.get(c)
+	if v and v in ('ộ','ọ'):
+		print(f"{c} é um tipo de o.")
+
+
+>>> o_family('ö')
+ö é um tipo de o.
+>>> type(('ộ','ọ'))
+<class 'tuple'>
+>>> t=('ộ','ọ')
+>>> t[0]
+'ộ'
+>>> t[0]t[1]
+SyntaxError: invalid syntax
+>>> t[1]
+'ọ'
+>>> t+ 'a'
+Traceback (most recent call last):
+  File "/usr/lib/python3.8/idlelib/run.py", line 559, in runcode
+    exec(code, self.locals)
+  File "<pyshell#239>", line 1, in <module>
+TypeError: can only concatenate tuple (not "str") to tuple
+>>> t+ ('a','b')
+('ộ', 'ọ', 'a', 'b')
+>>> for chave,valor em dic.items():
+
+SyntaxError: invalid syntax
+>>> for chave,valor in dic.items():
+	print(f"{valor}\t{chave}")
+
+
+ọ	ö
+ộ	ô
+ɨ	y
+>>> chaves=list(dic.keys())
+>>> chaves
+['ö', 'ô', 'y']
+>>> valores=list(dic.values())
+>>> valores
+['ọ', 'ộ', 'ɨ']
 >>> 
