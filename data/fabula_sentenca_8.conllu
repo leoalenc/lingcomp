@@ -1,0 +1,22 @@
+# generator = UDPipe 2, https://lindat.mff.cuni.cz/services/udpipe
+# udpipe_model = portuguese-bosque-ud-2.10-220711
+# udpipe_model_licence = CC BY-NC-SA
+# reviewer = Leonel Figueiredo de Alencar (LFdeA)
+# newdoc = A cigarra com a formiga
+# newpar
+# sent_id = 8
+# text = A chuva cai muitos dias, pelo que ninguém pode trabalhar.
+1	A	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	2	det	_	TokenRange=0:1
+2	chuva	chuva	NOUN	_	Gender=Fem|Number=Sing	3	nsubj	_	TokenRange=2:7
+3	cai	cair	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	0	root	_	TokenRange=8:11
+4	muitos	muito	DET	_	Gender=Masc|Number=Plur|PronType=Ind	5	det	_	TokenRange=12:18
+5	dias	dia	NOUN	_	Gender=Masc|Number=Plur	3	obl	_	SpaceAfter=No|TokenRange=19:23
+6	,	,	PUNCT	_	_	11	punct	_	TokenRange=23:24
+7-8	pelo	_	_	_	_	_	_	_	TokenRange=25:29
+7	por	por	ADP	_	_	8	case	_	_
+8	o	o	PRON	_	Gender=Masc|Number=Sing|PronType=Dem	12	obl	_	_
+9	que	que	PRON	_	Gender=Masc|Number=Sing|PronType=Rel	8	fixed	_	TokenRange=30:33
+10	ninguém	ninguém	PRON	_	Gender=Masc|Number=Sing|PronType=Ind	11	nsubj	_	TokenRange=34:41
+11	pode	poder	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	3	advcl:relcl	_	TokenRange=42:46
+12	trabalhar	trabalhar	VERB	_	VerbForm=Inf	11	xcomp	_	SpaceAfter=No|TokenRange=47:56
+13	.	.	PUNCT	_	_	3	punct	_	SpaceAfter=No|TokenRange=56:57
