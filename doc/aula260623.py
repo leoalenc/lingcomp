@@ -102,4 +102,121 @@ AttributeError: module 'os' has no attribute 'dir'
 >>> pat=r"\w*[ei]\w*"
 >>> re.findall(pat,sent[0])
 ['text', 'vergonha', 'de', 'pedir', 'muito', 'tempo']
+>>> re.split(r"=",sent[0])
+['# text ', ' Com vergonha de pedir, suportou calada por muito tempo.']
+>>> sent_text=re.split(r"=",sent[0])[1]
+>>> re.findall(pat,sent_text)
+['vergonha', 'de', 'pedir', 'muito', 'tempo']
+>>> re.findall(r"\S+",sent_text)
+['Com', 'vergonha', 'de', 'pedir,', 'suportou', 'calada', 'por', 'muito', 'tempo.']
+>>> re.findall(r"\w+",sent_text)
+['Com', 'vergonha', 'de', 'pedir', 'suportou', 'calada', 'por', 'muito', 'tempo']
+>>> re.findall(r"\W+",sent_text)
+[' ', ' ', ' ', ' ', ', ', ' ', ' ', ' ', ' ', '.']
+>>> re.findall(r"[\W+\S+]",sent_text)
+[' ', 'C', 'o', 'm', ' ', 'v', 'e', 'r', 'g', 'o', 'n', 'h', 'a', ' ', 'd', 'e', ' ', 'p', 'e', 'd', 'i', 'r', ',', ' ', 's', 'u', 'p', 'o', 'r', 't', 'o', 'u', ' ', 'c', 'a', 'l', 'a', 'd', 'a', ' ', 'p', 'o', 'r', ' ', 'm', 'u', 'i', 't', 'o', ' ', 't', 'e', 'm', 'p', 'o', '.']
+>>> re.findall(r"\W+\S+",sent_text)
+[' Com', ' vergonha', ' de', ' pedir,', ' suportou', ' calada', ' por', ' muito', ' tempo.']
+>>> re.findall(r"\w+|[.,]",sent_text)
+['Com', 'vergonha', 'de', 'pedir', ',', 'suportou', 'calada', 'por', 'muito', 'tempo', '.']
+>>> re.findall(r"[^,.]+",sent_text)
+[' Com vergonha de pedir', ' suportou calada por muito tempo']
+>>> re.findall(r"[^\s\w]|\w+",sent_text)
+['Com', 'vergonha', 'de', 'pedir', ',', 'suportou', 'calada', 'por', 'muito', 'tempo', '.']
+>>> "Oh! — disse ela; ele ficou, como sempre, calado. 4=5?"
+'Oh! — disse ela; ele ficou, como sempre, calado. 4=5?'
+>>> t=re.findall(r"[^\s\w]|\w+",sent_text)
+>>> re.findall(r"[^\s\w]|\w+",t)
+Traceback (most recent call last):
+  File "/usr/lib/python3.8/idlelib/run.py", line 559, in runcode
+    exec(code, self.locals)
+  File "<pyshell#56>", line 1, in <module>
+  File "/usr/lib/python3.8/re.py", line 241, in findall
+    return _compile(pattern, flags).findall(string)
+TypeError: expected string or bytes-like object
+>>> t
+['Com', 'vergonha', 'de', 'pedir', ',', 'suportou', 'calada', 'por', 'muito', 'tempo', '.']
+>>> t='Oh! — disse ela; ele ficou, como sempre, calado. 4=5?'
+>>> re.findall(r"[^\s\w]|\w+",t)
+['Oh', '!', '—', 'disse', 'ela', ';', 'ele', 'ficou', ',', 'como', 'sempre', ',', 'calado', '.', '4', '=', '5', '?']
+>>> t='Oh! — disse ela; ele ficou, como sempre, calado. 44=54?'
+>>> re.findall(r"[^\s\w]|\w+",t)
+['Oh', '!', '—', 'disse', 'ela', ';', 'ele', 'ficou', ',', 'como', 'sempre', ',', 'calado', '.', '44', '=', '54', '?']
+>>> t='Oh! — disse ela; ele ficou, como sempre, calado. 44=54? O tic-tac do relógio era ensurdecedor.'
+>>> re.findall(r"[^\s\w]|\w+",t)
+['Oh', '!', '—', 'disse', 'ela', ';', 'ele', 'ficou', ',', 'como', 'sempre', ',', 'calado', '.', '44', '=', '54', '?', 'O', 'tic', '-', 'tac', 'do', 'relógio', 'era', 'ensurdecedor', '.']
+>>> re.findall(r"[^\s\w]|\w+-",t)
+['!', '—', ';', ',', ',', '.', '=', '?', 'tic-', '.']
+>>> re.findall(r"[^\s\w-]|[\w|-]+",t)
+['Oh', '!', '—', 'disse', 'ela', ';', 'ele', 'ficou', ',', 'como', 'sempre', ',', 'calado', '.', '44', '=', '54', '?', 'O', 'tic-tac', 'do', 'relógio', 'era', 'ensurdecedor', '.']
+>>> re.findall(r"[^\s\w]|[\w|-]+",t)
+['Oh', '!', '—', 'disse', 'ela', ';', 'ele', 'ficou', ',', 'como', 'sempre', ',', 'calado', '.', '44', '=', '54', '?', 'O', 'tic-tac', 'do', 'relógio', 'era', 'ensurdecedor', '.']
+>>> r1=re.findall(r"[^\s\w-]|[\w|-]+",t)
+>>> r2=re.findall(r"[^\s\w]|[\w|-]+",t)
+>>> r1==r2
+True
+>>> r3=re.findall(r"[^\s\w]|[\w-]+",t)
+>>> r2==r3
+True
+>>> re.findall(r"[^\s\w]","- a-a")
+['-', '-']
+>>> re.findall(r"[^\s\w]|[\w-]+",t2)
+Traceback (most recent call last):
+  File "/usr/lib/python3.8/idlelib/run.py", line 559, in runcode
+    exec(code, self.locals)
+  File "<pyshell#73>", line 1, in <module>
+NameError: name 't2' is not defined
+>>> t2="- a-a"
+>>> re.findall(r"[^\s\w]|[\w-]+",t2)
+['-', 'a-a']
+>>> re.findall(r"[^\s\w-]",t)
+['!', '—', ';', ',', ',', '.', '=', '?', '.']
+>>> t
+'Oh! — disse ela; ele ficou, como sempre, calado. 44=54? O tic-tac do relógio era ensurdecedor.'
+>>> re.findall(r"[^\s\w]",t)
+['!', '—', ';', ',', ',', '.', '=', '?', '-', '.']
+>>> re.findall(r"[^\s\w\-]",t)
+['!', '—', ';', ',', ',', '.', '=', '?', '.']
+>>> t='Oh! — disse disse ela; ele ele ficou, como sempre sempre, calado. 44=54? O tic-tac do relógio era ensurdecedor.'
+>>> re.findall(r"[^\s\w]|[\w-]+",t)
+['Oh', '!', '—', 'disse', 'disse', 'ela', ';', 'ele', 'ele', 'ficou', ',', 'como', 'sempre', 'sempre', ',', 'calado', '.', '44', '=', '54', '?', 'O', 'tic-tac', 'do', 'relógio', 'era', 'ensurdecedor', '.']
+>>> re.findall(r"([^\s\w]|[\w-]+)\1",t)
+['s', 's', '4']
+>>> re.findall(r"([^\s\w]|[\w-]+) \1",t)
+['disse', 'ele', 'sempre']
+>>> pat=r"([^\s\w]|[\w-]+) \1"
+>>> result=re.search(pat,t)
+>>> result
+<re.Match object; span=(6, 17), match='disse disse'>
+>>> result.groupdict()
+{}
+>>> result.groups
+<built-in method groups of re.Match object at 0x7fd2df676d30>
+>>> result.groups()
+('disse',)
+>>> result.group()
+'disse disse'
+>>> result.end()
+17
+>>> result.start()
+6
+>>> pat=r"([^\s\w]|[\w-]+) (\1)"
+>>> result=re.search(pat,t)
+>>> result.groups()
+('disse', 'disse')
+>>> re.sub(pat,r"\1",t)
+'Oh! — disse ela; ele ficou, como sempre, calado. 44=54? O tic-tac do relógio era ensurdecedor.'
+>>> t
+'Oh! — disse disse ela; ele ele ficou, como sempre sempre, calado. 44=54? O tic-tac do relógio era ensurdecedor.'
+>>> pat=r"\d+=\d+"
+>>> re.findall(pat,t)
+['44=54']
+>>> pat=r"(\d+)=(\d+)"
+>>> re.sub(pat,r"\2 \1",t)
+'Oh! — disse disse ela; ele ele ficou, como sempre sempre, calado. 54 44? O tic-tac do relógio era ensurdecedor.'
+>>> pat=r"(\d+)(=)(\d+)"
+>>> re.sub(pat,r"\2\3\1",t)
+'Oh! — disse disse ela; ele ele ficou, como sempre sempre, calado. =5444? O tic-tac do relógio era ensurdecedor.'
+>>> re.sub(pat,r"\3\2\1",t)
+'Oh! — disse disse ela; ele ele ficou, como sempre sempre, calado. 54=44? O tic-tac do relógio era ensurdecedor.'
 >>> 
