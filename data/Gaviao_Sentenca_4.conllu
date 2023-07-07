@@ -2,8 +2,7 @@
 # udpipe_model = portuguese-bosque-ud-2.10-220711
 # udpipe_model_licence = CC BY-NC-SA
 # reviewer = Leonel Figueiredo de Alencar (LFdeA)
-# newdoc = Da tartaruga e o gavião (Rodrigues, 1890)
-# newpar
+# title = Da tartaruga e o gavião (Rodrigues, 1890)
 # sent_id = 4a
 # text = Quando chegou em casa perguntou à sua mãe: “De quem são as penas que acho no mato cada vez que vou caçar?”
 1	Quando	quando	SCONJ	_	_	2	mark	_	TokenRange=0:6
@@ -41,8 +40,7 @@
 # udpipe_model = portuguese-bosque-ud-2.10-220711
 # udpipe_model_licence = CC BY-NC-SA
 # reviewer = Leonel Figueiredo de Alencar (LFdeA)
-# newdoc = Da tartaruga e o gavião (Rodrigues, 1890)
-# newpar
+# title = Da tartaruga e o gavião (Rodrigues, 1890)
 # sent_id = 4b
 # text = Quando chegou em casa perguntou à sua mãe: “De quem são as penas que acho no mato cada vez que vou caçar?”
 1	Quando	quando	SCONJ	_	_	2	mark	_	TokenRange=0:6
