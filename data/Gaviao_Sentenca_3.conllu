@@ -26,7 +26,7 @@
 # sent_id = 3b
 # text = O filho ia caçar camaleões, sempre encontrava penas de pássaro.
 1	O	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	2	det	_	SpacesBefore=\s|TokenRange=1:2
-2	filho	filho	NOUN	_	Gender=Masc|Number=Sing	4	nsubj	_	TokenRange=3:8
+2	filho	filho	NOUN	_	Gender=Masc|Number=Sing	3	nsubj	_	TokenRange=3:8
 3	ia	ir	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Imp|VerbForm=Fin	0	root	_	TokenRange=9:11
 4	caçar	caçar	VERB	_	VerbForm=Inf	3	xcomp	_	TokenRange=12:17
 5	camaleões	camaleão	NOUN	_	Gender=Masc|Number=Plur	4	obj	_	SpaceAfter=No|TokenRange=18:27
