@@ -3,6 +3,7 @@
 # udpipe_model_licence = CC BY-NC-SA
 # reviewer = Leonel Figueiredo de Alencar (LFdeA)
 # title = Da tartaruga e o gavião (Rodrigues, 1890)
+# text_orig = Chegando em casa perguntou à sua mãe: “De quem são as penas que acho no mato cada vez que vou caçar?”
 # sent_id = 4a
 # text = Quando chegou em casa perguntou à sua mãe: “De quem são as penas que acho no mato cada vez que vou caçar?”
 1	Quando	quando	SCONJ	_	_	2	mark	_	TokenRange=0:6
@@ -42,6 +43,7 @@
 # reviewer = Leonel Figueiredo de Alencar (LFdeA)
 # title = Da tartaruga e o gavião (Rodrigues, 1890)
 # sent_id = 4b
+# text_orig = Chegando em casa perguntou à sua mãe: “De quem são as penas que acho no mato cada vez que vou caçar?”
 # text = Quando chegou em casa perguntou à sua mãe: “De quem são as penas que acho no mato cada vez que vou caçar?”
 1	Quando	quando	SCONJ	_	_	2	mark	_	TokenRange=0:6
 2	chegou	chegar	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	5	advcl	_	TokenRange=7:13

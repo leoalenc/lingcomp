@@ -1,0 +1,41 @@
+# text = Um dia em que foi caçar encontrou-se com as tartaruguinhas.
+# sent_id = 8
+# source = Barbosa Rodrigues, 1890
+# reviewer = Leonel Figueiredo de Alencar (LFdeA)
+# title = Da tartaruga e o gavião (Rodrigues, 1890)
+# team = Dominick, Letícia, Fco. Souza, Vivianne
+1	Um	um	NUM	_	NumType=Card	2	nummod	_	TokenRange=0:2
+2	dia	dia	NOUN	_	Gender=Masc|Number=Sing	7	obl	_	TokenRange=3:6
+3	em	em	ADP	_	_	4	case	_	TokenRange=7:9
+4	que	que	PRON	_	Gender=Masc|Number=Sing|PronType=Rel	5	obl	_	TokenRange=10:13
+5	foi	ir	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	2	acl:relcl	_	TokenRange=14:17
+6	caçar	caçar	VERB	_	VerbForm=Inf	5	xcomp	_	TokenRange=18:23
+7-8	encontrou-se	_	_	_	_	_	_	_	TokenRange=24:36
+7	encontrou	encontrar	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	_	_
+8	se	se	PRON	_	Case=Acc|Gender=Masc|Number=Sing|Person=3|PronType=Prs	7	expl	_	_
+9	com	com	ADP	_	_	11	case	_	TokenRange=37:40
+10	as	o	DET	_	Definite=Def|Gender=Fem|Number=Plur|PronType=Art	11	det	_	TokenRange=41:43
+11	tartaruguinhas	tartaruguinha	NOUN	_	Gender=Fem|Number=Plur	7	obl	_	SpaceAfter=No|TokenRange=44:58
+12	.	.	PUNCT	_	_	7	punct	_	SpacesAfter=\s\r\n|TokenRange=58:59
+
+# text = Depois as tartaruguinhas disseram para ele: "Vamos banhar-nos juntos".
+# sent_id = 9
+# source = Barbosa Rodrigues, 1890
+# reviewer = Leonel Figueiredo de Alencar (LFdeA)
+# title = Da tartaruga e o gavião (Rodrigues, 1890)
+# team = Dominick, Letícia, Fco. Souza, Vivianne
+1	Depois	depois	ADV	_	_	4	advmod	_	TokenRange=0:6
+2	as	o	DET	_	Definite=Def|Gender=Fem|Number=Plur|PronType=Art	3	det	_	TokenRange=7:9
+3	tartaruguinhas	tartaruguinha	NOUN	_	Gender=Fem|Number=Plur	4	nsubj	_	TokenRange=10:24
+4	disseram	dizer	VERB	_	Mood=Ind|Number=Plur|Person=3|VerbForm=Fin	0	root	_	TokenRange=25:33
+5	para	para	ADP	_	_	6	case	_	TokenRange=34:38
+6	ele	ele	PRON	_	Gender=Masc|Number=Sing|Person=3|PronType=Prs	4	iobj	_	SpaceAfter=No|TokenRange=39:42
+7	:	:	PUNCT	_	_	9	punct	_	TokenRange=42:43
+8	"	"	PUNCT	_	_	9	punct	_	SpaceAfter=No|TokenRange=44:45
+9	Vamos	ir	VERB	_	Mood=Ind|Number=Plur|Person=1|Tense=Pres|VerbForm=Fin	4	ccomp	_	TokenRange=45:50
+10-11	banhar-nos	_	_	_	_	_	_	_	TokenRange=51:61
+10	banhar	banhar	VERB	_	VerbForm=Inf	9	xcomp	_	_
+11	nos	nós	PRON	_	Case=Acc|Number=Plur|Person=1|PronType=Prs	10	obj	_	_
+12	juntos	junto	ADJ	_	Gender=Masc|Number=Plur	10	advcl	_	SpaceAfter=No|TokenRange=62:68
+13	"	"	PUNCT	_	_	9	punct	_	SpaceAfter=No|TokenRange=68:69
+14	.	.	PUNCT	_	_	4	punct	_	TokenRange=69:70
